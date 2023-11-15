@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /djangoenv
 /django_blog.pyproj
+/mysite/db.sqlite3
