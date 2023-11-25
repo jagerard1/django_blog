@@ -1,5 +1,5 @@
 from django.contrib import admin
-from polling.models import Poll
+from blogging.models import Post
 
 # Register your models here.
-admin.site.register(Poll)
+admin.site.register(Post)
