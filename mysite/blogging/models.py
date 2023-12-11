@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib import admin
 
 # Create your models here.
 class Post(models.Model):
@@ -23,3 +24,15 @@ class Category(models.Model):
     
     class Meta:
         verbose_name_plural = 'Categories'
+        
+class CategoryInline(admin.StackedInline):
+    model = Category.posts.through
+    
+    
+class PostAdmin(admin.ModelAdmin):
+    inlines = [CategoryInline,]
+    
+class CategoryAdmin(admin.ModelAdmin):
+    inlines = [CategoryInline,]
+    
+    exclude = ('posts',)
