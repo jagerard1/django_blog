@@ -30,9 +30,9 @@ class CategoryInline(admin.StackedInline):
     
     
 class PostAdmin(admin.ModelAdmin):
-    inlines = [CategoryInline]
+    inlines = [CategoryInline,]
     
 class CategoryAdmin(admin.ModelAdmin):
-    inlines = [CategoryInline]
+    inlines = [CategoryInline,]
     
     exclude = ('posts',)
