@@ -19,7 +19,7 @@ class PollDetailView(DetailView):
         if request.POST.get("vote") == "Yes":
             poll.score += 1
         else:
-            pole.score -= 1
+            poll.score -= 1
         poll.save()
         
         context = {"object": poll}
